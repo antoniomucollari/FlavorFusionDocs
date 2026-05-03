@@ -20,11 +20,10 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Introduction',
+        collapsed: true,
         items: [
-          { text: 'Quick Start', link: 'introduction/quick-start' },
-          { text: 'Menus', link: 'technicalDocs/menus' },
-          { text: 'Available Restaurants', link: 'technicalDocs/availableRestaurantDocumentation' },
-          { text: 'documenation for vitepress', link: 'technicalDocs/markdown-examples' }
+          { text: 'Quick Start', link: '/introduction/quick-start' },
+          { text: 'Architecture Overview', link: '/introduction/architectureOverview' }
         ]
       }
     ],
