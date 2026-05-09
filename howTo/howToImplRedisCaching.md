@@ -86,7 +86,7 @@ The `value` represents the **cache name**.
 
 ### What does `sync = true` do?
 > [!WARNING]
-> It did not fix the [multiple api call for the api distance matrix](/issueWithMultipleApiCalls.md). therefore I removed it.
+> It did not fix the [multiple api call for the api distance matrix](/singularIssues/issueWithMultipleApiCalls.md). therefore I removed it.
 
 
 ***What it should do:*** prevents multiple threads from calculating the same cache value at the same time.
@@ -103,8 +103,11 @@ Then:
     all use the cached result
 ```
 #### Why it did not work for me?
-The "Microsecond Race Condition"
+Because of Race Condition
+```text
+2026-05-08T12:32:50.814+02:00 INFO 33800 --- [FoodApp] [nio-8080-exec-7]...
+2026-05-08T12:32:50.833+02:00 INFO 33800 --- [FoodApp] [nio-8080-exec-7]...
+```
+see the timings are identical.
 > [!INFO]
 > A cache is designed to speed up requests that happen seconds, minutes, or hours apart. It is NOT designed to act as a traffic cop for a spamming frontend.
-
-Maybe in production this would not occur because data would occur with much more difference in miliseconds but still my solution is stateless this way.

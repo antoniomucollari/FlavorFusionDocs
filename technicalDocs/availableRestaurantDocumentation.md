@@ -226,7 +226,7 @@ Initially, I created an endpoint in Spring to accept and return 4 different `Pag
 I was not worried at the beginning because I had a $300 budget from Google Cloud credits. However, after the 3 months ended and I web-scraped Wolt with many restaurants, I realized this could become a major problem in a real-world application.
 
 Pricing is around `$5–$10` per 1,000 elements, and the cost can increase very quickly.\
-[How I fixed it?](/issueWithMultipleApiCalls.md)
+[How I fixed it?](/singularIssues/issueWithMultipleApiCalls.md)
 ### Infinite scroll
 * **Initial Load (page=0):** The frontend calls /available-restaurants-dashboard. It gets the carousels and the first 10 items of the normal list.
 
