@@ -23,7 +23,16 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Quick Start', link: '/introduction/quick-start' },
-          { text: 'Architecture Overview', link: '/introduction/architectureOverview' }
+          { text: 'Architecture Overview', link: '/introduction/architectureOverview' },
+          { text: 'Available Restaurants', link: '/technicalDocs/availableRestaurantDocumentation.md' },
+          { text: 'Gemini overview', link: '/technicalDocs/gemini3flash.md' }
+        ]
+      },
+      {
+        text: 'Cloud Security',
+        collapsed: true,
+        items: [
+          { text: 'Quick Start', link: '/cloudSecurity/main.md' },
         ]
       }
     ],
