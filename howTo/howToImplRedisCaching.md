@@ -102,12 +102,4 @@ Other requests:
 Then:
     all use the cached result
 ```
-#### Why it did not work for me?
-Because of Race Condition
-```text
-2026-05-08T12:32:50.814+02:00 INFO 33800 --- [FoodApp] [nio-8080-exec-7]...
-2026-05-08T12:32:50.833+02:00 INFO 33800 --- [FoodApp] [nio-8080-exec-7]...
-```
-see the timings are identical.
-> [!INFO]
-> A cache is designed to speed up requests that happen seconds, minutes, or hours apart. It is NOT designed to act as a traffic cop for a spamming frontend.
+### [why it did not work with sync = true](/singularIssues/issueWithMultipleApiCalls.md#why-it-did-not-work-for-me)

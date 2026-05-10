@@ -1,5 +1,5 @@
 # Multiple Api call to google api matrix for the identical venue
-
+![previous logic](../images/distanceMatrixCacheMiss.png)
 ```text
 
 2026-05-08T12:32:50.814+02:00  INFO 33800 --- [FoodApp] [nio-8080-exec-7] c.t.F.r.service.DistanceMatrixService    : Calling Distance Matrix API for branch 4 from 41.32934441,19.78429205 to 41.36807700,19.70940020
@@ -24,7 +24,28 @@
 ....
 ....
 ```
+
+
 If you scroll to the right you can see the exact identical api calls waisting elements and therefore waisting money.
+> 
+> This can only happen if the venue is in present in multiple filters but for me this happen a lot.
+
+
+
+---
+### Why it did not work even with `sync = true`?
+```java
+@Cacheable(value = "distanceMatrix", key = "#restaurantBranchId + ':' + #userLocationKey", sync = true)
+```
+Because of Race Condition
+```text
+2026-05-08T12:32:50.814+02:00 INFO 33800 --- [FoodApp] [nio-8080-exec-7]...
+2026-05-08T12:32:50.833+02:00 INFO 33800 --- [FoodApp] [nio-8080-exec-7]...
+```
+see the timings are identical.
+> [!INFO]
+> A cache is designed to speed up requests that happen seconds, minutes, or hours apart. It is NOT designed to act as a traffic cop for a spamming frontend.
+
 ### How I solved the issue
 Instead of calling same endpoint three times I created a wrapper controller method which gives the result of 4 singular endpoints `getDashboardData()`.
 The wrapper baisically calls the actual service `findAvailableRestaurants()` with the sort, filters that the frontend previously used. Now there is no cache miss.

@@ -1,46 +1,46 @@
 import {
   useMediaQuery
-} from "./chunk-T3Q5HG2B.js";
+} from "./chunk-HKT4NZKT.js";
 import {
   computed,
   ref,
   shallowRef,
   watch
-} from "./chunk-OL6HMLMB.js";
+} from "./chunk-ITVJ6X5I.js";
 
 // node_modules/vitepress/dist/client/theme-default/index.js
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
 
 // node_modules/vitepress/dist/client/theme-default/without-fonts.js
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/base.css";
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/icons.css";
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
-import "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
-import VPBadge from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import Layout from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/Layout.vue";
-import { default as default2 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import { default as default3 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPButton.vue";
-import { default as default4 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
-import { default as default5 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPFeatures.vue";
-import { default as default6 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPHomeContent.vue";
-import { default as default7 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
-import { default as default8 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
-import { default as default9 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
-import { default as default10 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPImage.vue";
-import { default as default11 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPLink.vue";
-import { default as default12 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPNavBarSearch.vue";
-import { default as default13 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPSocialLink.vue";
-import { default as default14 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPSocialLinks.vue";
-import { default as default15 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPSponsors.vue";
-import { default as default16 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
-import { default as default17 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
-import { default as default18 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
-import { default as default19 } from "/home/fsdsf/Desktop/FOODAPP/FlavorFusionDocs/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/base.css";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/icons.css";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
+import "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
+import VPBadge from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import Layout from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/Layout.vue";
+import { default as default2 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import { default as default3 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPButton.vue";
+import { default as default4 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
+import { default as default5 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPFeatures.vue";
+import { default as default6 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPHomeContent.vue";
+import { default as default7 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
+import { default as default8 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
+import { default as default9 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
+import { default as default10 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPImage.vue";
+import { default as default11 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPLink.vue";
+import { default as default12 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPNavBarSearch.vue";
+import { default as default13 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPSocialLink.vue";
+import { default as default14 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPSocialLinks.vue";
+import { default as default15 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPSponsors.vue";
+import { default as default16 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
+import { default as default17 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
+import { default as default18 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
+import { default as default19 } from "C:/Users/anton/OneDrive/Desktop/Tailwind/FoodApp/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
 
 // node_modules/vitepress/dist/client/theme-default/composables/local-nav.js
 import { onContentUpdated } from "vitepress";
