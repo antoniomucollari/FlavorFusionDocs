@@ -1,6 +1,6 @@
 # How to implement Redis caching and one example
 Here I will explain with code how you (and I in future) can implement ***redis caching*** in your app with the available restaurant example.
-
+[Cache hit example](distanceMatrixCacheExample.png)
 ## Add dependency in pom.xml file
 ```xml
 		<dependency>
@@ -77,7 +77,7 @@ public class RedisConfig {
     @Cacheable(value = "distanceMatrix", key = "#restaurantBranchId + ':' + #userLocationKey") //[!code ++]
     public DistanceMatrixInfo getDistanceMatrix(Long restaurantBranchId, String userLocationKey, LatLng origin, LatLng destination) {...}
 ```
-
+That's it. Now whenever a request with `branchId` + `userLocationKey` (which is formated from the helper `getUserLocationCacheKey`) is present in the cache will trigger a cache hit. Else a cache miss and the cache will get added the new result which is returned from this method.
 ### What is `value = "distanceMatrix"`?
 
 

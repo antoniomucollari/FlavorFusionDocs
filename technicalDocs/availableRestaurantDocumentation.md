@@ -1,5 +1,8 @@
 # FOOD FUSION DOCUMENTATION
-
+[basic flow img](/images/finding_available_restaurantsBasicFlow.png){target="_blank"}\
+[basic flow url](https://excalidraw.com/#json=jDhhe7QJxhpn5MWQ9QiLz,8BdvQeU6V7lBXAMMGdI-iA){target="_blank"}\
+[basic flow ai summary](availableRestaurantAiSummary.md)\
+[basic flow ai summary 2](availableRestaurantAiSummary2.md)
 #### In this documentation, the focus is not on the technical rules or structure of writing documentation, but rather explaining the system itself. Im trying to write this short and concise.
 *Writing time: 1/1/2026*\
 I will write this in story form.
@@ -102,9 +105,17 @@ At the end it returns GeoResults, which is a list wrapper containing all the Bra
 ![exampleResults](/images/GeoResults.png)\
 We're grabbing the IDs from the geo-search results and converting them into a list of Longs "nearbyBranchIds".
 
+The scores (e.g., 3482979529963497) are Redis GEO encoded integers — specifically 52-bit geohash integers that Redis uses internally to store coordinates in a Sorted Set.\
+**How it works**\
+* When you call geoOps.add(REDIS_GEO_KEY, locations), Redis:
+* Takes the (longitude, latitude) point
+* Encodes it into a 52-bit integer geohash
+* Stores it as the score in the Sorted Set
+
 
 ## How it returns the restaurant branches after getting the IDs
-Now that we have the id for the location available restaurants branches we are
+
+Now that we have the `Sorted Set` we are
 not finished because there are more [validations](#what-defines-available) that we have to do like to apply like what we discussed in the beginning.
 Also, we need the restaurant card info like
 ```java
@@ -261,23 +272,4 @@ There is a lot of duplicate of restaurant branches inside the json for example
 you can see Yogurteria appear 3 times and this is 40 rows of json per restaurant * 3 = 120 rows but I can reduce it to only 40 rows.
 
 
-## Caching
-[How to implement redis caching](/howTo/howToImplRedisCaching.md)\
-DistanceMatrixService uses Spatial Caching for the api call with Google Distance Matrix API and this works when a different customer within 400m m radius makes a request.
-The caching is done from the userLocation key and I have rounded the lat and long to 3 decimal ex: 41.324,19.822". So similar users within 400m meters can get identical results.
-that we can map to our branchSummaryDto inside the mapper.
-If no error occurs, the method returns a [RestaurantSummaryDTO](#what-defines-available).
-Time to live is 60min.
-I only chach ids of the venues and not the actual information like name, address, phone number...etc. This is done to prevent execive calling to the google api matrix.
-```java
-    // cache ~400m radius
-    private String getUserLocationCacheKey(double lat, double lon) {
-        int precision = 250;
-
-        double latKey = Math.floor(lat * precision) / precision;
-        double lonKey = Math.floor(lon * precision) / precision;
-
-        return String.format("%.4f,%.4f", latKey, lonKey);
-    }
-```
 

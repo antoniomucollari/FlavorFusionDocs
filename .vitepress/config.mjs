@@ -24,7 +24,13 @@ export default defineConfig({
         items: [
           { text: 'Quick Start', link: '/introduction/quick-start' },
           { text: 'Architecture Overview', link: '/introduction/architectureOverview' },
-          { text: 'Available Restaurants', link: '/technicalDocs/availableRestaurantDocumentation.md' },
+          {
+            text: 'Available Restaurants', link: '/technicalDocs/availableRestaurantDocumentation.md',
+            items: [
+              { text: 'Caching Restaurants', link: '/technicalDocs/RestaurantCaching/availableRestaurantDocumentation.md' }
+            ]
+          },
+
           { text: 'Gemini overview', link: '/technicalDocs/gemini3flash.md' }
         ]
       },
